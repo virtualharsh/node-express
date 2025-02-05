@@ -1,0 +1,23 @@
+{
+    "name": "node-learnings",
+    "version": "1.0.0",
+    "description": "node js with backend",
+    "homepage": "https://github.com/virtualharsh/node-express#readme",
+    "bugs": {
+        "url": "https://github.com/virtualharsh/node-express/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/virtualharsh/node-express.git"
+    },
+    "license": "ISC",
+    "author": "Harsh",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index"
+    },
+    "dependencies": {
+        "express": "^4.21.2"
+    }
+}
