@@ -12,7 +12,7 @@
 
 const express = require('express');
 const fs = require('fs')
-const users = require('./users.json');
+const users = require('../users.json');
 
 const app = express();
 
