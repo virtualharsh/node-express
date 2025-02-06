@@ -11,9 +11,12 @@
 // delete /user/1 - deletes a user
 
 const express = require('express');
+const fs = require('fs')
 const users = require('./users.json');
 
 const app = express();
+
+app.use(express.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => res.send('Homepage'));
 
@@ -31,7 +34,11 @@ app.route('/api/user')
         res.json(users);
     })
     .post((req, res) => {
-        return res.send("post")
+        const body = req.body;
+        users.push({...body,id: users.length+1})
+        fs.writeFile('./users.json',JSON.stringify(users),(err,data)=>{
+            return res.json({ status: "success", id: users.length})
+        })
     })
 
 app.route('/api/user/:id')
@@ -41,10 +48,10 @@ app.route('/api/user/:id')
         return res.send(user)
     })
     .patch((req, res) => {
-
+        console.log("Update");
     })
     .delete((req, res) => {
-
+        console.log("Delete");
     })
 
 
