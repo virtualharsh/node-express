@@ -1,0 +1,16 @@
+{
+  "name": "mvc",
+  "version": "1.0.0",
+  "description": "Model View Controller pattern refactoring",
+  "license": "ISC",
+  "author": "Harsh",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.10.0"
+  }
+}
