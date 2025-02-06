@@ -42,3 +42,58 @@
 
 ```
 
+# Database notes
+
+> ### show dbs 
+
+> ### use Database-name
+
+> ### db - Displays current working database
+
+> ### use newDatabase 
+
+> ### db.createCollection("name")
+
+> ### db.collection.insertOne() 
+
+> ### db.users.updateOne({ name: "Alice" }, { $set: { age: 26 } })
+
+> ### db.users.deleteOne({ name: "Alice" })
+
+> ### db.users.drop()
+
+> ### db.users.find({ age: { $gt: 20 } })
+
+
+# Installing mongoose
+> npm i mongoose
+
+## Connecting with database
+```
+const mongoose = require('mongoose')
+```
+
+```
+mongoose
+.connect('mongodb://localhost:27017/Demo')
+.then(() => console.log("Database Connected"))
+.catch((e) => console.log(e))
+```
+
+## Create Schema
+```
+const loginSchema = new mongoose.Schema({
+    userId : {
+        type : String,
+        required : true,
+        unique : true
+    },
+    password : {
+        type : String,
+        required : true
+    }
+})
+```
+
+## Creating model
+> const User = mongoose.model('user',loginSchema)
