@@ -1,0 +1,24 @@
+{
+    "name": "authentication",
+    "version": "1.0.0",
+    "description": "node authentication",
+    "homepage": "https://github.com/virtualharsh/node-express#readme",
+    "bugs": {
+        "url": "https://github.com/virtualharsh/node-express/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/virtualharsh/node-express.git"
+    },
+    "license": "ISC",
+    "author": "Harsh",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "test": "nodemon index"
+    },
+    "dependencies": {
+        "cookie-parser": "^1.4.7",
+        "uuid": "^11.0.5"
+    }
+}
